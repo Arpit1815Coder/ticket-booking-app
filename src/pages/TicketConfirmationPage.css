@@ -1,0 +1,90 @@
+/* src/pages/TicketConfirmationPage.css */
+
+.ticket-confirmation-container {
+    padding: 20px;
+    max-width: 90%;
+    width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* To ensure that rounded corners are respected */
+    border: 1px solid #ddd; /* Add a light border for subtle separation */
+}
+
+.confirmation-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.ticket-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid #e74c3c; /* Highlighting section with border */
+    padding-top: 20px;
+}
+
+.ticket-movie-poster {
+    width: 220px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-info {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.ticket-info p {
+    margin: 10px 0;
+}
+
+.ticket-info span {
+    font-weight: bold;
+    color: #e74c3c; /* Add emphasis to key information */
+}
+
+@media (max-width: 768px) {
+    .ticket-confirmation-container {
+        padding: 15px;
+    }
+
+    .ticket-movie-poster {
+        width: 180px;
+    }
+
+    .confirmation-title {
+        font-size: 2rem;
+    }
+
+    .ticket-info {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ticket-confirmation-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .ticket-movie-poster {
+        width: 150px;
+    }
+
+    .confirmation-title {
+        font-size: 1.8rem;
+    }
+
+    .ticket-info {
+        font-size: 0.9rem;
+    }
+}

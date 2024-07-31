@@ -1,0 +1,116 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #27282b96; /* Soft blue background */
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.763);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 2rem; /* Increased font size for better readability */
+  font-weight: bold;
+}
+
+.navbar-logo {
+  color: #fff; /* Changed to white for better contrast */
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+  outline: none;
+  width: 200px; /* Fixed width for search input */
+}
+
+.navbar-search button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0056b3;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar-search button:hover {
+  background-color: #004494;
+  transform: scale(1.05);
+}
+
+.navbar-dropdown {
+  margin-left: 20px;
+}
+
+.navbar-dropdown select {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fff;
+  color: #333; /* Dark color for text */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-search {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .navbar-search input {
+    width: calc(100% - 110px); /* Adjust width for smaller screens */
+  }
+
+  .navbar-search button {
+    width: 100px; /* Fixed width for button on smaller screens */
+  }
+  
+  .navbar-dropdown {
+    margin: 10px 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .navbar-search input {
+    width: calc(100% - 80px); /* Adjust for very small screens */
+  }
+
+  .navbar-search button {
+    width: 80px; /* Smaller button width */
+  }
+}
