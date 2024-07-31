@@ -6,15 +6,17 @@
   min-height: 100vh;
 }
 
-/* .homepage-title {
+/* Title styling */
+.homepage-title {
   text-align: center;
   font-size: 2.5rem;
   margin-top: 40px;
   color: #212529;
   font-weight: bold;
   margin-bottom: 20px; /* Added margin bottom for better spacing */
+}
 
-
+/* Grid for movie cards */
 .movies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -24,6 +26,7 @@
   padding: 0 10px;
 }
 
+/* Movie card styling */
 .movie-card {
   position: relative;
   background-color: #ffffff;
@@ -31,20 +34,26 @@
   overflow: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically */
 }
 
+/* Hover effect for movie card */
 .movie-card:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
+/* Movie poster image styling */
 .movie-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  width: 100%; /* Ensure the image takes full width of the card */
+  height: 100%; /* Ensure the image takes full height of the card */
+  object-fit: cover; /* Cover the entire area */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
 }
 
+/* Movie title styling */
 .movie-card .movie-title {
   position: absolute;
   bottom: 0;
@@ -59,11 +68,12 @@
   transition: background 0.3s ease;
 }
 
+/* Hover effect for movie title */
 .movie-card:hover .movie-title {
   background: rgba(0, 0, 0, 0.8);
 }
 
-/* Ensure link styling is reset to allow custom styles */
+/* Link styling */
 .movie-link {
   text-decoration: none;
   color: inherit;
@@ -74,10 +84,12 @@
 }
 
 /* Responsive Design */
+
+/* For tablets and smaller screens */
 @media (max-width: 768px) {
   .homepage-title {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .movies-grid {
@@ -91,10 +103,11 @@
   }
 }
 
+/* For mobile phones */
 @media (max-width: 480px) {
   .homepage-title {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   .movies-grid {
@@ -105,5 +118,12 @@
   .movie-card .movie-title {
     font-size: 0.9rem;
     padding: 8px;
+  }
+
+  /* Ensure movie poster fits without extra space */
+  .movie-card img {
+    width: 100%; /* Ensure the image takes full width of the card */
+    height: 100%; /* Ensure the image takes full height of the card */
+    object-fit: cover; /* Cover the entire area */
   }
 }
